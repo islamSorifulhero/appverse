@@ -23,26 +23,25 @@ const Banner = () => {
                         <div className="sm:flex justify-center items-center gap-8">
                             <nav className="flex flex-col text-center">
                                 <span className='text-[14px]'>Total Downloads</span>
-                                <span className="font-extrabold text-6xl">29.6M</span>
+                                <span className="font-extrabold text-6xl my-2">29.6M</span>
                                 <span className='text-[14px]'>21% More Than Last Month</span>
                             </nav>
 
                             <nav className="flex flex-col text-center">
                                 <span className='text-[14px]'>Total Reviews</span>
-                                <span className="font-extrabold text-6xl">906M</span>
+                                <span className="font-extrabold text-6xl my-2">906M</span>
                                 <span className='text-[14px]'>46% More Than Last Month</span>
                             </nav>
 
                             <nav className="flex flex-col text-center">
                                 <span className='text-[14px]'>Active Apps</span>
-                                <span className="font-extrabold text-6xl">132+</span>
+                                <span className="font-extrabold text-6xl my-2">132+</span>
                                 <span className='text-[14px]'>31 More Will Launch</span>
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
-
 
         </div>
     );
