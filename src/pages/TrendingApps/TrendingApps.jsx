@@ -1,13 +1,18 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TrendingApp from '../TrendingApp/TrendingApp';
 
 const TrendingApps = () => {
     const [apps, setApps] = useState([]);
-
-    // const appsPromise = fetch('/homeAppData.json').then(res => res.json());
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('/homeAppData.json').then((res) => res.json()).then((data) => setApps(data));
+        fetch('/homeAppData.json').then((res) => res.json()).then((data) => {
+            setApps(data); setLoading(false);
+        })
+            .catch((error) => {
+                console.error('Error fetching apps:', error);
+                setLoading(false);
+            });
     }, []);
 
     return (
@@ -16,28 +21,32 @@ const TrendingApps = () => {
                 Trending Apps
             </h2>
 
-            <Suspense fallback={<p className="text-center">Loading apps...</p>}>
+            {loading ? (
+                <p className="text-center text-gray-500 text-lg">Loading apps...</p>
+            ) : apps.length === 0 ? (
+                <p className="text-center text-gray-500 text-lg">No apps found.</p>
+            ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                     {apps.map((app) => (
                         <TrendingApp key={app.id} singleApp={app} />
                     ))}
                 </div>
-            </Suspense>
+            )}
         </section>
     );
 };
 
-function AppList({ promise }) {
-    const apps = React.use(promise);
-    return (
-        <div>
-            {
-                apps.map((singleApp) => (
-                    <TrendingApp key={singleApp.id} singleApp={singleApp}></TrendingApp>
-                ))
-            }
-        </div>
-    )
-}
+// function AppList({ promise }) {
+//     const apps = React.use(promise);
+//     return (
+//         <div>
+//             {
+//                 apps.map((singleApp) => (
+//                     <TrendingApp key={singleApp.id} singleApp={singleApp}></TrendingApp>
+//                 ))
+//             }
+//         </div>
+//     )
+// }
 
 export default TrendingApps;

@@ -22,7 +22,8 @@ const Navbar = () => {
                     <div>
                         <img className='w-8 h-8' src={logo} alt="" />
                     </div>
-                    <h1><span className='text-xl font-extrabold bg-linear-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent'>HERO.IO</span></h1>
+                    <h1><span className='font-bold bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent'>HERO.IO</span>
+                    </h1>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -33,7 +34,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold text-[14px]"><img src={github} alt="" />Contribute</a>
+                <a className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold text-[14px]"><img src={github} alt="" />Contribute</a>
             </div>
         </div>
     );
