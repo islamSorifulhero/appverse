@@ -32,6 +32,9 @@ const TrendingApps = () => {
                     ))}
                 </div>
             )}
+            <div>
+                <button className='text-center text-3xl mx-auto flex btn mt-10 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold'>Show All</button>
+            </div>
         </section>
     );
 };

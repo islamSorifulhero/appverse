@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router";
 import Root from '../pages/Roots/Root';
 import ErrorPages from '../pages/ErrorPages/ErrorPages';
 import Home from '../pages/Home/Home';
-
+import Apps from '../pages/Apps/Apps';
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +15,10 @@ export const router = createBrowserRouter([
             index: true,
             path: "/",
             Component: Home
+        },
+        {
+          path: '/Apps',
+          Component: Apps
         }
     ]
   },

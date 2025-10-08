@@ -16,14 +16,14 @@
   {
     "id": 3,
     "name": "Instagram",
-    "image": "https://images.unsplash.com/photo-1543286386-8178122c5478?w=400",
+    "image": "https://i.ibb.co.com/xSDrHXJ3/Instagram.webp",
     "rating": 3.9,
     "downloads": "1B+"
   },
   {
     "id": 4,
     "name": "Facebook",
-    "image": "https://images.unsplash.com/photo-1507146426996-ef053064333e?w=400",
+    "image": "https://i.ibb.co.com/MDZrRHpc/Facebook.png",
     "rating": 4.0,
     "downloads": "5B+"
   },
@@ -37,21 +37,21 @@
   {
     "id": 6,
     "name": "Spotify: Music and Podcasts",
-    "image": "https://images.unsplash.com/photo-1610486776852-7e05e5d3c8c9?w=400",
+    "image": "https://i.ibb.co.com/0pNX19SS/spotify.png",
     "rating": 4.3,
     "downloads": "1B+"
   },
   {
     "id": 7,
     "name": "Telegram",
-    "image": "https://images.unsplash.com/photo-1623315357989-130a0e28f114?w=400",
+    "image": "https://i.ibb.co.com/Y41fZw6s/telegram.webp",
     "rating": 4.1,
     "downloads": "1B+"
   },
   {
     "id": 8,
     "name": "Snapchat",
-    "image": "https://images.unsplash.com/photo-1616428414451-b842c13d3330?w=400",
+    "image": "https://i.ibb.co.com/zVGRjQsf/chat.png",
     "rating": 4.1,
     "downloads": "1B+"
   }

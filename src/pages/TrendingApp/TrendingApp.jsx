@@ -9,7 +9,7 @@ const TrendingApp = ({ singleApp }) => {
             <img
                 src={image}
                 alt={name}
-                className="w-full h-40 object-cover rounded-t-2xl"
+                className="w-35 h-35 justify-center items-center flex mx-auto object-cover rounded-t-2xl"
             />
             <div className="p-4">
                 <h3 className="font-semibold text-lg text-gray-800 mb-2">{name}</h3>
