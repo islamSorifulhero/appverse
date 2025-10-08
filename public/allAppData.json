@@ -1,0 +1,399 @@
+[
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Spotify_icon.svg",
+    title: "Spotify",
+    companyName: "Spotify AB",
+    id: 1,
+    description: "Stream and discover millions of songs, podcasts, and playlists from around the world.",
+    size: 52,
+    reviews: 12500000,
+    ratingAvg: 4.5,
+    downloads: 1000000000,
+    ratings: [
+      { name: "1 star", count: 500000 },
+      { name: "2 star", count: 600000 },
+      { name: "3 star", count: 1200000 },
+      { name: "4 star", count: 2500000 },
+      { name: "5 star", count: 7700000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+    title: "Facebook",
+    companyName: "Meta Platforms Inc.",
+    id: 2,
+    description: "Connect with friends and the world around you on Facebook.",
+    size: 68,
+    reviews: 15000000,
+    ratingAvg: 4.2,
+    downloads: 5000000000,
+    ratings: [
+      { name: "1 star", count: 800000 },
+      { name: "2 star", count: 900000 },
+      { name: "3 star", count: 1800000 },
+      { name: "4 star", count: 4000000 },
+      { name: "5 star", count: 7400000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png",
+    title: "Instagram",
+    companyName: "Meta Platforms Inc.",
+    id: 3,
+    description: "Share photos, stories, and reels with your friends and followers.",
+    size: 45,
+    reviews: 21000000,
+    ratingAvg: 4.6,
+    downloads: 5000000000,
+    ratings: [
+      { name: "1 star", count: 600000 },
+      { name: "2 star", count: 800000 },
+      { name: "3 star", count: 2000000 },
+      { name: "4 star", count: 4800000 },
+      { name: "5 star", count: 12600000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+    title: "WhatsApp Messenger",
+    companyName: "WhatsApp LLC",
+    id: 4,
+    description: "Fast, simple, and secure messaging app to connect with anyone globally.",
+    size: 38,
+    reviews: 19000000,
+    ratingAvg: 4.7,
+    downloads: 5000000000,
+    ratings: [
+      { name: "1 star", count: 400000 },
+      { name: "2 star", count: 600000 },
+      { name: "3 star", count: 1500000 },
+      { name: "4 star", count: 4000000 },
+      { name: "5 star", count: 13500000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/df/Netflix_icon.svg",
+    title: "Netflix",
+    companyName: "Netflix Inc.",
+    id: 5,
+    description: "Watch popular movies, series, and exclusive Netflix Originals anytime, anywhere.",
+    size: 90,
+    reviews: 9500000,
+    ratingAvg: 4.3,
+    downloads: 1000000000,
+    ratings: [
+      { name: "1 star", count: 600000 },
+      { name: "2 star", count: 700000 },
+      { name: "3 star", count: 1400000 },
+      { name: "4 star", count: 3000000 },
+      { name: "5 star", count: 3800000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Google_Chrome_icon_%282023%29.svg",
+    title: "Google Chrome",
+    companyName: "Google LLC",
+    id: 6,
+    description: "Fast, secure, and easy-to-use web browser built for modern internet users.",
+    size: 120,
+    reviews: 17000000,
+    ratingAvg: 4.5,
+    downloads: 10000000000,
+    ratings: [
+      { name: "1 star", count: 700000 },
+      { name: "2 star", count: 800000 },
+      { name: "3 star", count: 1500000 },
+      { name: "4 star", count: 4000000 },
+      { name: "5 star", count: 10000000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/44/TikTok_Icon_Black.svg",
+    title: "TikTok",
+    companyName: "ByteDance Ltd.",
+    id: 7,
+    description: "Create, watch, and share short-form videos with people all over the world.",
+    size: 89,
+    reviews: 22000000,
+    ratingAvg: 4.4,
+    downloads: 3000000000,
+    ratings: [
+      { name: "1 star", count: 1000000 },
+      { name: "2 star", count: 1200000 },
+      { name: "3 star", count: 2400000 },
+      { name: "4 star", count: 5000000 },
+      { name: "5 star", count: 12400000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/d1/YouTube_icon_%282013-2017%29.png",
+    title: "YouTube",
+    companyName: "Google LLC",
+    id: 8,
+    description: "Watch, upload, and share videos — from entertainment to education — worldwide.",
+    size: 110,
+    reviews: 25000000,
+    ratingAvg: 4.8,
+    downloads: 10000000000,
+    ratings: [
+      { name: "1 star", count: 500000 },
+      { name: "2 star", count: 600000 },
+      { name: "3 star", count: 1400000 },
+      { name: "4 star", count: 4000000 },
+      { name: "5 star", count: 18900000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Twitter_Logo_Blue.svg",
+    title: "X (Twitter)",
+    companyName: "X Corp.",
+    id: 9,
+    description: "Real-time news, discussions, and global conversations on the X platform.",
+    size: 80,
+    reviews: 8000000,
+    ratingAvg: 4.1,
+    downloads: 1000000000,
+    ratings: [
+      { name: "1 star", count: 600000 },
+      { name: "2 star", count: 700000 },
+      { name: "3 star", count: 1000000 },
+      { name: "4 star", count: 2400000 },
+      { name: "5 star", count: 3300000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Google_Play_Store_badge_EN.svg",
+    title: "Google Play Store",
+    companyName: "Google LLC",
+    id: 10,
+    description: "The official app marketplace for Android devices by Google.",
+    size: 35,
+    reviews: 13000000,
+    ratingAvg: 4.6,
+    downloads: 10000000000,
+    ratings: [
+      { name: "1 star", count: 500000 },
+      { name: "2 star", count: 700000 },
+      { name: "3 star", count: 1000000 },
+      { name: "4 star", count: 3200000 },
+      { name: "5 star", count: 7600000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    title: "Apple Music",
+    companyName: "Apple Inc.",
+    id: 11,
+    description: "Stream over 100 million songs, ad-free, across all your Apple devices.",
+    size: 60,
+    reviews: 5000000,
+    ratingAvg: 4.5,
+    downloads: 200000000,
+    ratings: [
+      { name: "1 star", count: 200000 },
+      { name: "2 star", count: 300000 },
+      { name: "3 star", count: 600000 },
+      { name: "4 star", count: 1500000 },
+      { name: "5 star", count: 2400000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/39/Google_Maps_Logo_2020.svg",
+    title: "Google Maps",
+    companyName: "Google LLC",
+    id: 12,
+    description: "Navigate and explore your world with real-time GPS, traffic, and transit info.",
+    size: 95,
+    reviews: 18000000,
+    ratingAvg: 4.7,
+    downloads: 10000000000,
+    ratings: [
+      { name: "1 star", count: 400000 },
+      { name: "2 star", count: 500000 },
+      { name: "3 star", count: 900000 },
+      { name: "4 star", count: 3000000 },
+      { name: "5 star", count: 13200000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/95/Google_Drive_icon_%282020%29.svg",
+    title: "Google Drive",
+    companyName: "Google LLC",
+    id: 13,
+    description: "Store, share, and collaborate on files securely from any device.",
+    size: 60,
+    reviews: 11000000,
+    ratingAvg: 4.6,
+    downloads: 5000000000,
+    ratings: [
+      { name: "1 star", count: 400000 },
+      { name: "2 star", count: 500000 },
+      { name: "3 star", count: 1000000 },
+      { name: "4 star", count: 2600000 },
+      { name: "5 star", count: 6500000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Telegram_2019_Logo.svg",
+    title: "Telegram",
+    companyName: "Telegram FZ LLC",
+    id: 14,
+    description: "Fast and secure messaging app with powerful privacy features.",
+    size: 45,
+    reviews: 6000000,
+    ratingAvg: 4.7,
+    downloads: 1000000000,
+    ratings: [
+      { name: "1 star", count: 200000 },
+      { name: "2 star", count: 300000 },
+      { name: "3 star", count: 600000 },
+      { name: "4 star", count: 1800000 },
+      { name: "5 star", count: 3100000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Gmail_icon_%282020%29.svg",
+    title: "Gmail",
+    companyName: "Google LLC",
+    id: 15,
+    description: "Organized, secure email service with 15 GB free storage and smart inbox.",
+    size: 50,
+    reviews: 16000000,
+    ratingAvg: 4.8,
+    downloads: 10000000000,
+    ratings: [
+      { name: "1 star", count: 400000 },
+      { name: "2 star", count: 500000 },
+      { name: "3 star", count: 1000000 },
+      { name: "4 star", count: 2500000 },
+      { name: "5 star", count: 11600000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Google_Photos_icon_%282020%29.svg",
+    title: "Google Photos",
+    companyName: "Google LLC",
+    id: 16,
+    description: "Automatically back up, organize, and share your photos and videos easily.",
+    size: 75,
+    reviews: 9000000,
+    ratingAvg: 4.5,
+    downloads: 5000000000,
+    ratings: [
+      { name: "1 star", count: 400000 },
+      { name: "2 star", count: 600000 },
+      { name: "3 star", count: 800000 },
+      { name: "4 star", count: 2000000 },
+      { name: "5 star", count: 5200000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Pinterest_Logo.svg",
+    title: "Pinterest",
+    companyName: "Pinterest Inc.",
+    id: 17,
+    description: "Discover ideas for recipes, home decor, style inspiration, and more.",
+    size: 42,
+    reviews: 8000000,
+    ratingAvg: 4.6,
+    downloads: 1000000000,
+    ratings: [
+      { name: "1 star", count: 300000 },
+      { name: "2 star", count: 400000 },
+      { name: "3 star", count: 700000 },
+      { name: "4 star", count: 1800000 },
+      { name: "5 star", count: 4800000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Canva_logo.svg",
+    title: "Canva",
+    companyName: "Canva Pty Ltd.",
+    id: 18,
+    description: "Design anything—posters, social media posts, and logos—with ease.",
+    size: 85,
+    reviews: 5000000,
+    ratingAvg: 4.8,
+    downloads: 500000000,
+    ratings: [
+      { name: "1 star", count: 200000 },
+      { name: "2 star", count: 300000 },
+      { name: "3 star", count: 500000 },
+      { name: "4 star", count: 1200000 },
+      { name: "5 star", count: 2800000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/31/Zoom_Communications_Logo.svg",
+    title: "Zoom",
+    companyName: "Zoom Video Communications Inc.",
+    id: 19,
+    description: "Video meetings, chat, and collaboration made simple and reliable.",
+    size: 110,
+    reviews: 7000000,
+    ratingAvg: 4.4,
+    downloads: 1000000000,
+    ratings: [
+      { name: "1 star", count: 400000 },
+      { name: "2 star", count: 500000 },
+      { name: "3 star", count: 800000 },
+      { name: "4 star", count: 2000000 },
+      { name: "5 star", count: 3300000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Linkedin_icon.svg",
+    title: "LinkedIn",
+    companyName: "LinkedIn Corporation",
+    id: 20,
+    description: "Professional networking platform to connect, learn, and grow your career.",
+    size: 60,
+    reviews: 8000000,
+    ratingAvg: 4.3,
+    downloads: 1000000000,
+    ratings: [
+      { name: "1 star", count: 400000 },
+      { name: "2 star", count: 500000 },
+      { name: "3 star", count: 900000 },
+      { name: "4 star", count: 2200000 },
+      { name: "5 star", count: 4000000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Reddit_logo_new.svg",
+    title: "Reddit",
+    companyName: "Reddit Inc.",
+    id: 21,
+    description: "Join communities, discuss trending topics, and share your interests.",
+    size: 70,
+    reviews: 4500000,
+    ratingAvg: 4.2,
+    downloads: 500000000,
+    ratings: [
+      { name: "1 star", count: 300000 },
+      { name: "2 star", count: 400000 },
+      { name: "3 star", count: 500000 },
+      { name: "4 star", count: 1000000 },
+      { name: "5 star", count: 2300000 }
+    ]
+  },
+  {
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Discord_Color_Text_Logo_%282021%29.svg",
+    title: "Discord",
+    companyName: "Discord Inc.",
+    id: 22,
+    description: "Chat, call, and build communities around your interests in real-time.",
+    size: 85,
+    reviews: 9000000,
+    ratingAvg: 4.7,
+    downloads: 1000000000,
+    ratings: [
+      { name: "1 star", count: 200000 },
+      { name: "2 star", count: 300000 },
+      { name: "3 star", count: 600000 },
+      { name: "4 star", count: 1800000 },
+      { name: "5 star", count: 6100000 }
+    ]
+  }
+]
+  
