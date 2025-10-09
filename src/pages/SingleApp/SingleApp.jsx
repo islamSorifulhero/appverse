@@ -3,11 +3,28 @@ import { useParams } from "react-router";
 import { Download, Star, MessageSquare } from "lucide-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useInstallation } from "../javaScript/function";
+
+const parseCountToNumber = (countStr) => {
+    if (typeof countStr !== 'string') return 0;
+    const value = parseFloat(countStr);
+    const lastChar = countStr.slice(-1).toUpperCase();
+
+    if (lastChar === 'M') {
+        return value * 1000000;
+    } else if (lastChar === 'B') {
+        return value * 1000000000;
+    } else if (lastChar === 'K') {
+        return value * 1000;
+    }
+    return value;
+};
 
 const SingleApp = () => {
     const { id } = useParams();
     const [app, setApp] = useState(null);
     const [installed, setInstalled] = useState(false);
+    const { isInstalled, handleInstall: installApp } = useInstallation();
 
     useEffect(() => {
         fetch("/allAppData.json")
@@ -15,11 +32,16 @@ const SingleApp = () => {
             .then((data) => {
                 const foundApp = data.find((item) => item.id === parseInt(id));
                 setApp(foundApp);
+                if (foundApp && isInstalled(foundApp.id)) {
+                    setInstalled(true);
+                }
             })
             .catch((err) => console.log(err));
-    }, [id]);
+    }, [id, isInstalled]);
 
     const handleInstall = () => {
+        if (!app) return;
+        installApp(app);
         setInstalled(true);
         toast.success(`${app.name} installed successfully`, {
             position: "top-center",
@@ -41,6 +63,7 @@ const SingleApp = () => {
     ];
 
     const totalRatings = ratings.reduce((acc, r) => acc + r.count, 0);
+    const paragraphs = app.description.split("\n\n");
 
     return (
         <div className="max-w-5xl mx-auto my-12 px-4 md:px-0">
@@ -61,7 +84,7 @@ const SingleApp = () => {
                     <div className="flex flex-wrap gap-8 mb-5">
                         <div className="flex flex-col items-center">
                             <Download className="text-green-600" />
-                            <p className="text-lg font-bold">{app.downloads}</p>
+                            <p className="text-lg font-bold">{parseCountToNumber(app.downloads)}</p>
                             <p className="text-gray-500 text-sm">Downloads</p>
                         </div>
                         <div className="flex flex-col items-center">
@@ -89,8 +112,6 @@ const SingleApp = () => {
                 </div>
             </div>
 
-
-
             <div className="mt-10">
                 <h3 className="text-xl font-semibold mb-3 text-gray-800">
                     Ratings Breakdown
@@ -114,7 +135,14 @@ const SingleApp = () => {
 
             <div className="mt-10">
                 <h3 className="text-xl font-semibold mb-3 text-gray-800">Description</h3>
-                <p className="text-gray-700 leading-relaxed">{app.description}</p>
+                <p className="text-gray-700 leading-relaxed">
+                    {paragraphs.map((paragraph, index) => (
+                        <React.Fragment key={index}>
+                            {paragraph}
+                            {index < paragraphs.length - 1 && <><br /><br /></>}
+                        </React.Fragment>
+                    ))}
+                </p>
             </div>
 
             <ToastContainer />

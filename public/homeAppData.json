@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "WhatsApp Messenger",
-    "image": "https://i.ibb.co.com/N6wCg0GZ/whatsapp.png",
+    "image": "https://i.ibb.co/N6wCg0GZ/whatsapp.png",
     "rating": 4.4,
     "downloads": "5B+",
     "companyName": "Meta Platforms, Inc.",
@@ -21,7 +21,7 @@
   {
     "id": 2,
     "name": "TikTok - Videos, Shop & LIVE",
-    "image": "https://i.ibb.co.com/qYCRcW63/tiktok.png",
+    "image": "https://i.ibb.co/qYCRcW63/tiktok.png",
     "rating": 4.1,
     "downloads": "1B+",
     "companyName": "TikTok Pte. Ltd.",
@@ -40,7 +40,7 @@
   {
     "id": 3,
     "name": "Instagram",
-    "image": "https://i.ibb.co.com/xSDrHXJ3/Instagram.webp",
+    "image": "https://i.ibb.co/xSDrHXJ3/Instagram.webp",
     "rating": 3.9,
     "downloads": "1B+",
     "companyName": "Meta Platforms, Inc.",
@@ -59,7 +59,7 @@
   {
     "id": 4,
     "name": "Facebook",
-    "image": "https://i.ibb.co.com/MDZrRHpc/Facebook.png",
+    "image": "https://i.ibb.co/MDZrRHpc/Facebook.png",
     "rating": 4.0,
     "downloads": "5B+",
     "companyName": "Meta Platforms, Inc.",
@@ -78,7 +78,7 @@
   {
     "id": 5,
     "name": "Messenger",
-    "image": "https://i.ibb.co.com/2YpfP4xV/message.jpg",
+    "image": "https://i.ibb.co/2YpfP4xV/message.jpg",
     "rating": 4.7,
     "downloads": "5B+",
     "companyName": "Meta Platforms, Inc.",
@@ -97,7 +97,7 @@
   {
     "id": 6,
     "name": "Spotify: Music and Podcasts",
-    "image": "https://i.ibb.co.com/0pNX19SS/spotify.png",
+    "image": "https://i.ibb.co/0pNX19SS/spotify.png",
     "rating": 4.3,
     "downloads": "1B+",
     "companyName": "Spotify AB",
@@ -116,7 +116,7 @@
   {
     "id": 7,
     "name": "Telegram",
-    "image": "https://i.ibb.co.com/Y41fZw6s/telegram.webp",
+    "image": "https://i.ibb.co/Y41fZw6s/telegram.webp",
     "rating": 4.1,
     "downloads": "1B+",
     "companyName": "Telegram FZ-LLC",
@@ -135,7 +135,7 @@
   {
     "id": 8,
     "name": "Snapchat",
-    "image": "https://i.ibb.co.com/zVGRjQsf/chat.png",
+    "image": "https://i.ibb.co/zVGRjQsf/chat.png",
     "rating": 4.1,
     "downloads": "1B+",
     "companyName": "Snap Inc.",
