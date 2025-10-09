@@ -1,94 +1,123 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Download, Star, MessageSquare } from "lucide-react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SingleApp = () => {
     const { id } = useParams();
     const [app, setApp] = useState(null);
+    const [installed, setInstalled] = useState(false);
 
     useEffect(() => {
         fetch("/allAppData.json")
             .then((res) => res.json())
             .then((data) => {
-                const found = data.find((item) => item.id === parseInt(id));
-                setApp(found);
-            });
+                const foundApp = data.find((item) => item.id === parseInt(id));
+                setApp(foundApp);
+            })
+            .catch((err) => console.log(err));
     }, [id]);
 
+    const handleInstall = () => {
+        setInstalled(true);
+        toast.success(`${app.name} installed successfully`, {
+            position: "top-center",
+            autoClose: 2000,
+            theme: "colored",
+        });
+    };
+
     if (!app) {
-        return <p className="text-center mt-10 text-lg text-gray-600">Loading...</p>;
+        return <p className="text-center mt-10 text-gray-500 text-lg">Loading...</p>;
     }
 
+    const ratings = [
+        { stars: 5, count: 150 },
+        { stars: 4, count: 80 },
+        { stars: 3, count: 30 },
+        { stars: 2, count: 10 },
+        { stars: 1, count: 5 },
+    ];
+
+    const totalRatings = ratings.reduce((acc, r) => acc + r.count, 0);
+
     return (
-        <div className="max-w-5xl mx-auto px-4 my-12">
-            <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="max-w-5xl mx-auto my-12 px-4 md:px-0">
+            <div className="flex flex-col md:flex-row items-start gap-8 border rounded-xl p-6 shadow">
                 <img
                     src={app.image}
                     alt={app.name}
-                    className="w-48 h-48 rounded-2xl object-cover shadow-md"
+                    className="w-48 h-48 object-cover rounded-lg"
                 />
 
                 <div className="flex-1">
-                    <h1 className="text-3xl font-semibold mb-1">{app.name}</h1>
+                    <h2 className="text-2xl font-bold text-gray-800 mb-2">{app.name}</h2>
                     <p className="text-gray-600 mb-4">
-                        Developed by <span className="text-[#632EE3] font-medium">{app.developer || "hero.io"}</span>
+                        Developed by{" "}
+                        <span className="text-blue-600 font-medium">{app.developer}</span>
                     </p>
 
-                    <div className="flex flex-wrap gap-8 text-gray-700 mb-4">
-                        <div className="flex items-center gap-2">
-                            <Download className="w-5 h-5 text-green-600" />
-                            <span><b>{app.downloads}</b> Downloads</span>
+                    <div className="flex flex-wrap gap-8 mb-5">
+                        <div className="flex flex-col items-center">
+                            <Download className="text-green-600" />
+                            <p className="text-lg font-bold">{app.downloads}</p>
+                            <p className="text-gray-500 text-sm">Downloads</p>
                         </div>
-                        <div className="flex items-center gap-2">
-                            <Star className="w-5 h-5 text-yellow-500" />
-                            <span><b>{app.rating}</b> Ratings</span>
+                        <div className="flex flex-col items-center">
+                            <Star className="text-yellow-500" />
+                            <p className="text-lg font-bold">{app.rating}</p>
+                            <p className="text-gray-500 text-sm">Avg Rating</p>
                         </div>
-                        <div className="flex items-center gap-2">
-                            <MessageSquare className="w-5 h-5 text-purple-600" />
-                            <span><b>{app.reviews || "54K"}</b> Reviews</span>
+                        <div className="flex flex-col items-center">
+                            <MessageSquare className="text-purple-500" />
+                            <p className="text-lg font-bold">{app.reviews}</p>
+                            <p className="text-gray-500 text-sm">Total Reviews</p>
                         </div>
                     </div>
 
-                    <button className="btn bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md">
-                        Install Now ({app.size || "291 MB"})
+                    <button
+                        onClick={handleInstall}
+                        disabled={installed}
+                        className={`${installed
+                                ? "bg-gray-400 cursor-not-allowed"
+                                : "bg-green-500 hover:bg-green-600"
+                            } text-white font-semibold px-6 py-2 rounded-lg transition`}
+                    >
+                        {installed ? "Installed" : `Install Now (${app.size})`}
                     </button>
                 </div>
             </div>
 
-            <div className="mt-12">
-                <h2 className="text-2xl font-semibold mb-4">Ratings</h2>
-                <div className="space-y-3">
-                    {[5, 4, 3, 2, 1].map((star) => (
-                        <div key={star} className="flex items-center gap-2">
-                            <span className="w-12 text-gray-700">{star} star</span>
+
+
+            <div className="mt-10">
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                    Ratings Breakdown
+                </h3>
+                {ratings.map((r) => {
+                    const percent = (r.count / totalRatings) * 100;
+                    return (
+                        <div key={r.stars} className="flex items-center gap-3 mb-2">
+                            <span className="w-12 text-gray-700">{r.stars} ★</span>
                             <div className="w-full bg-gray-200 rounded-full h-3">
                                 <div
-                                    className="bg-orange-500 h-3 rounded-full"
-                                    style={{
-                                        width: `${(Math.random() * 80 + 20).toFixed(0)}%`,
-                                    }}
+                                    className="h-3 bg-yellow-400 rounded-full"
+                                    style={{ width: `${percent}%` }}
                                 ></div>
                             </div>
+                            <span className="w-10 text-right text-gray-700">{r.count}</span>
                         </div>
-                    ))}
-                </div>
+                    );
+                })}
             </div>
 
-            <div className="mt-12">
-                <h2 className="text-2xl font-semibold mb-3">Description</h2>
-                <p className="text-gray-700 leading-relaxed">
-                    {app.description ||
-                        `This app is designed to enhance productivity and focus by combining
-            smart tools, task tracking, and performance analytics. Users can
-            organize tasks, monitor progress, and manage time effectively.
-            Whether you’re working, studying, or creating — this app helps you
-            stay disciplined and motivated throughout the day.`}
-                </p>
+            <div className="mt-10">
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">Description</h3>
+                <p className="text-gray-700 leading-relaxed">{app.description}</p>
             </div>
 
-            <footer className="mt-12 text-center text-gray-500 text-sm border-t pt-4">
-                © {new Date().getFullYear()} HERO.IO — All rights reserved.
-            </footer>
+            <ToastContainer />
         </div>
     );
 };
