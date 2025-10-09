@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Star, Download } from "lucide-react";
+import { Link } from "react-router";
 
 const AllApps = () => {
   const [apps, setApps] = useState([]);
@@ -66,7 +67,7 @@ const AllApps = () => {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {filteredApps.map((app) => (
-            <div
+            <Link to={`/apps/${app.id}`}
               key={app.id}
               className="border rounded-lg p-4 shadow hover:shadow-lg transition"
             >
@@ -89,7 +90,7 @@ const AllApps = () => {
                   <span>{app.downloads}</span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       )}
