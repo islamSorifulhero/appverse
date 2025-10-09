@@ -5,7 +5,7 @@ import { NavLink } from 'react-router';
 
 const Navbar = () => {
 
-    const activeClass = "text-purple-600 font-bold";
+    const activeClass = "text-purple-600 font-bold underline";
 
     return (
         <div className="navbar w-11/12 mx-auto">
@@ -56,7 +56,7 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end">
-                <a href='https://github.com/islamSorifulhero/appverse' className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold text-[14px]">
+                <a href='https://github.com/islamSorifulhero' className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold text-[14px]">
                     <img src={github} alt="" />Contribute
                 </a>
             </div>

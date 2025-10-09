@@ -63,7 +63,7 @@ const AllApps = () => {
       {loading ? (
         <p className="text-center text-gray-500 text-lg mt-10">Loading......</p>
       ) : filteredApps.length === 0 ? (
-        <p className="text-center text-gray-500 text-lg mt-10">No Apps Found</p>
+        <p className="text-center text-gray-500 text-6xl mt-10">No Apps Found</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {filteredApps.map((app) => (
