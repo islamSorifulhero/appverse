@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import AllApps from "../AllApps/AllApps";
 
 const Apps = () => {
-    return (
-        <div>
-            <h1>Hello Apps</h1>
-        </div>
-    );
+  return (
+    <div>
+      <AllApps />
+    </div>
+  );
 };
 
 export default Apps;

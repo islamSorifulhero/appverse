@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import TrendingApp from '../TrendingApp/TrendingApp';
+import { Link } from 'react-router';
+// import { Navigate } from 'react-router';
 
 const TrendingApps = () => {
     const [apps, setApps] = useState([]);
@@ -17,9 +19,10 @@ const TrendingApps = () => {
 
     return (
         <section className="my-12 px-4 md:px-8">
-            <h2 className="text-3xl font-semibold text-center mb-8 text-gray-800">
+            <h2 className="text-3xl font-semibold text-center mb-1 text-gray-800">
                 Trending Apps
             </h2>
+            <p className='text-center mb-12 text-gray-700'>Explore All Trending Apps on the Market developer by us</p>
 
             {loading ? (
                 <p className="text-center text-gray-500 text-lg">Loading apps...</p>
@@ -33,7 +36,10 @@ const TrendingApps = () => {
                 </div>
             )}
             <div>
-                <button className='text-center text-3xl mx-auto flex btn mt-10 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold'>Show All</button>
+                {/* <button className='text-center text-3xl mx-auto flex btn mt-10 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold'>Show All</button> */}
+
+                <Link to="/Apps" className='w-40 text-3xl mx-auto flex btn mt-10 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold'
+                >Show All</Link>
             </div>
         </section>
     );
