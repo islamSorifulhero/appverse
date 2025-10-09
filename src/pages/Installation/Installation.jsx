@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Download, Star } from "lucide-react";
 import { toast, ToastContainer } from "react-toastify";
 import { useInstallation } from '../javaScript/function';
 
-const Installation = () => {
+const parseSizeToNumber = (sizeStr) => {
+    if (typeof sizeStr === 'number') return sizeStr;
+    if (typeof sizeStr !== 'string') return 0;
+    return parseFloat(sizeStr.replace('MB', '').trim());
+};
+
+const InstalledApps = () => {
     const { installedApps, handleUninstall } = useInstallation();
+
+    const [sortBy, setSortBy] = useState('size_high_low');
 
     const onUninstall = (appId, appName) => {
         handleUninstall(appId);
@@ -14,6 +22,29 @@ const Installation = () => {
             theme: "colored",
         });
     };
+
+    const sortApps = (apps, sortType) => {
+        if (!apps || apps.length === 0) return [];
+
+        const sorted = [...apps];
+
+        sorted.sort((a, b) => {
+            const sizeA = parseSizeToNumber(a.size);
+            const sizeB = parseSizeToNumber(b.size);
+
+            if (sortType === 'size_low_high') {
+                return sizeA - sizeB;
+            } else if (sortType === 'size_high_low') {
+                return sizeB - sizeA;
+            }
+
+            return sizeB - sizeA;
+        });
+
+        return sorted;
+    };
+
+    const sortedInstalledApps = sortApps(installedApps, sortBy);
 
     return (
         <div className="max-w-5xl mx-auto my-12 px-4 md:px-0">
@@ -28,10 +59,16 @@ const Installation = () => {
                 <p className="text-lg font-semibold text-gray-800">
                     {installedApps.length} Apps Found
                 </p>
+
                 <div className="relative">
-                    <select className="border border-gray-300 rounded-lg px-4 py-2 text-sm appearance-none pr-8">
-                        <option>Sort By Size</option>
-                        <option>Sort By Rating</option>
+                    <select
+                        className="border border-gray-300 rounded-lg px-4 py-2 text-sm appearance-none pr-8 cursor-pointer"
+                        value={sortBy}
+                        onChange={(e) => setSortBy(e.target.value)}
+                    >
+                        <option value="size_high_low">High-Low</option>
+                        <option value="size_low_high">Low-High</option>
+
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
@@ -40,8 +77,8 @@ const Installation = () => {
             </div>
 
             <div className="space-y-4">
-                {installedApps.length > 0 ? (
-                    installedApps.map((app) => (
+                {sortedInstalledApps.length > 0 ? (
+                    sortedInstalledApps.map((app) => (
                         <div
                             key={app.id}
                             className="flex items-center justify-between border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition"
@@ -90,4 +127,4 @@ const Installation = () => {
     );
 };
 
-export default Installation;
+export default InstalledApps;
