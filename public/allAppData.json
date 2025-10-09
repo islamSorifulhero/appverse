@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "WhatsApp Messenger",
-    "image": "https://i.ibb.co.com/N6wCg0GZ/whatsapp.png",
+    "image": "https://i.ibb.co.com/VpM7ZhDf/whatsapps.jpg",
     "rating": 4.4,
     "downloads": "5B+",
     "companyName": "Meta Platforms, Inc.",
@@ -274,7 +274,7 @@
   {
     "id": 9,
     "name": "X (Twitter)",
-    "image": "https://i.ibb.co.com/R3m4PqF/twitter-x.png",
+    "image": "https://i.ibb.co.com/mrxkWy7Y/twitter.png",
     "rating": 4.2,
     "downloads": "500M+",
     "companyName": "X Corp.",
@@ -308,7 +308,7 @@
   {
     "id": 10,
     "name": "YouTube",
-    "image": "https://i.ibb.co.com/D0h2gX4/youtube-icon.png",
+    "image": "https://i.ibb.co.com/pjThgbkL/youtube.webp",
     "rating": 4.5,
     "downloads": "10B+",
     "companyName": "Google LLC",
@@ -342,7 +342,7 @@
   {
     "id": 11,
     "name": "Google Maps",
-    "image": "https://i.ibb.co.com/V7R8fS2/google-maps.png",
+    "image": "https://i.ibb.co.com/fzdYJ6HV/Map.png",
     "rating": 4.7,
     "downloads": "10B+",
     "companyName": "Google LLC",
@@ -376,7 +376,7 @@
   {
     "id": 12,
     "name": "Netflix",
-    "image": "https://i.ibb.co.com/qL5tG8P/netflix-icon.png",
+    "image": "https://i.ibb.co.com/SwTk3XTz/netflix.webp",
     "rating": 4.4,
     "downloads": "1B+",
     "companyName": "Netflix, Inc.",
@@ -410,7 +410,7 @@
   {
     "id": 13,
     "name": "Pinterest",
-    "image": "https://i.ibb.co.com/Y1Z2cW9/pinterest-icon.png",
+    "image": "https://i.ibb.co.com/HfHq2x2P/pinterest.webp",
     "rating": 4.5,
     "downloads": "1B+",
     "companyName": "Pinterest",
@@ -444,7 +444,7 @@
   {
     "id": 14,
     "name": "Google Chrome",
-    "image": "https://i.ibb.co.com/0Y7xT4K/chrome-icon.png",
+    "image": "https://i.ibb.co.com/cK5fTtpd/Chrome.png",
     "rating": 4.3,
     "downloads": "10B+",
     "companyName": "Google LLC",
@@ -478,7 +478,7 @@
   {
     "id": 15,
     "name": "Reddit",
-    "image": "https://i.ibb.co.com/gL8mF2Q/reddit-icon.png",
+    "image": "https://i.ibb.co.com/R4VM9Djm/reddit.png",
     "rating": 4.6,
     "downloads": "100M+",
     "companyName": "Reddit, Inc.",
@@ -512,7 +512,7 @@
   {
     "id": 16,
     "name": "Discord",
-    "image": "https://i.ibb.co.com/jP4hS7D/discord-icon.png",
+    "image": "https://i.ibb.co.com/Mk79c4B7/Discord.jpg",
     "rating": 4.7,
     "downloads": "500M+",
     "companyName": "Discord Inc.",
@@ -546,7 +546,7 @@
   {
     "id": 17,
     "name": "LinkedIn",
-    "image": "https://i.ibb.co.com/cR6pY4B/linkedin-icon.png",
+    "image": "https://i.ibb.co.com/HDZjTBXm/linkdin.png",
     "rating": 4.3,
     "downloads": "1B+",
     "companyName": "LinkedIn",
@@ -580,7 +580,7 @@
   {
     "id": 18,
     "name": "Zoom",
-    "image": "https://i.ibb.co.com/H1tW3qC5/zoom.png",
+    "image": "https://i.ibb.co.com/7t4K9fxV/zoom.jpg",
     "rating": 4.0,
     "downloads": "500M+",
     "companyName": "Zoom Video Communications",
@@ -614,7 +614,7 @@
   {
     "id": 19,
     "name": "Canva",
-    "image": "https://i.ibb.co.com/3fK2kG0p/canva.png",
+    "image": "https://i.ibb.co.com/h1cWk7sm/canva.jpg",
     "rating": 4.8,
     "downloads": "100M+",
     "companyName": "Canva",
@@ -648,7 +648,7 @@
   {
     "id": 20,
     "name": "Amazon Shopping",
-    "image": "https://i.ibb.co.com/kG6sL5V/amazon-shopping.png",
+    "image": "https://i.ibb.co.com/gL5BrnHZ/amazon.jpg",
     "rating": 4.1,
     "downloads": "500M+",
     "companyName": "Amazon Mobile LLC",

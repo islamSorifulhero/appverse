@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import TrendingApp from '../TrendingApp/TrendingApp';
 import { Link } from 'react-router';
-// import { Navigate } from 'react-router';
 
 const TrendingApps = () => {
     const [apps, setApps] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('/homeAppData.json').then((res) => res.json()).then((data) => {
-            setApps(data); setLoading(false);
-        })
+        fetch('/homeAppData.json')
+            .then((res) => res.json())
+            .then((data) => {
+                setApps(data);
+                setLoading(false);
+            })
             .catch((error) => {
                 console.error('Error fetching apps:', error);
                 setLoading(false);
@@ -35,27 +37,17 @@ const TrendingApps = () => {
                     ))}
                 </div>
             )}
-            <div>
-                {/* <button className='text-center text-3xl mx-auto flex btn mt-10 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold'>Show All</button> */}
 
-                <Link to="/Apps" className='w-40 text-3xl mx-auto flex btn mt-10 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold'
-                >Show All</Link>
+            <div className='flex justify-center'>
+                <Link
+                    to="/Apps"
+                    className='mt-10 inline-block px-8 py-3 rounded-xl text-xl bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold transition hover:opacity-90'
+                >
+                    Show All
+                </Link>
             </div>
         </section>
     );
 };
-
-// function AppList({ promise }) {
-//     const apps = React.use(promise);
-//     return (
-//         <div>
-//             {
-//                 apps.map((singleApp) => (
-//                     <TrendingApp key={singleApp.id} singleApp={singleApp}></TrendingApp>
-//                 ))
-//             }
-//         </div>
-//     )
-// }
 
 export default TrendingApps;
