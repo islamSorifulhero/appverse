@@ -21,13 +21,28 @@ const Navbar = () => {
                         </Link></li>
                     </ul>
                 </div>
-                <div className="flex justify-center items-center gap-2 cursor-pointer">
+                {/* <div className="flex justify-center items-center gap-2 cursor-pointer">
                     <div>
                         <img className='w-8 h-8' src={logo} alt="" />
                     </div>
                     <h1><span className='font-bold bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent'>HERO.IO</span>
                     </h1>
+                </div> */}
+
+                {/* <div className="flex justify-center items-center gap-2 cursor-pointer">
+                    <Link to="/"><div>
+                        <img className='w-8 h-8' src={logo} alt="" />
+                    </div>
+                        <h1><span className='font-bold bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent'>HERO.IO</span>
+                        </h1></Link>
+                </div> */}
+
+                <Link className="flex justify-center items-center gap-2 cursor-pointer" to="/"><div>
+                    <img className='w-8 h-8' src={logo} alt="" />
                 </div>
+                    <h1><span className='font-bold bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent'>HERO.IO</span>
+                    </h1></Link>
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -35,7 +50,7 @@ const Navbar = () => {
                     <li><Link to="/Apps">Apps</Link></li>
                     {/* <li><Link to="/Apps">Show All</Link></li> */}
                     <li><Link to="">Installation
-                        </Link></li>
+                    </Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
