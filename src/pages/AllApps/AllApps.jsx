@@ -86,9 +86,11 @@ const AllApps = () => {
                 alt={app.name}
                 className="w-35 h-35 mx-auto object-cover rounded-t-2xl"
               />
-              <h3 className="font-semibold text-lg text-gray-800 mb-2 mt-3 text-center">
+              <h3 className="font-semibold text-lg text-gray-800 mb-2 mt-3">
                 {app.name}
               </h3>
+
+              <p className="text-sm text-gray-500 mb-3">{app.companyName}</p>
 
               <div className="flex justify-between items-center text-gray-600 text-sm">
                 <div className="flex items-center gap-1">
