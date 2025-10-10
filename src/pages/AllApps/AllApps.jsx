@@ -63,7 +63,17 @@ const AllApps = () => {
       {loading ? (
         <p className="text-center text-gray-500 text-lg mt-10">Loading......</p>
       ) : filteredApps.length === 0 ? (
-        <p className="text-center text-gray-500 text-6xl mt-10">No Apps Found</p>
+        <div>
+          <p className="text-center text-gray-500 text-6xl mt-10">No Apps Found</p>
+          <div className="flex justify-center">
+            <Link
+              to="/"
+              className='mt-5 mb-5 inline-block px-8 py-3 rounded-xl text-xl bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold transition hover:opacity-90'
+            >
+              Go Back!
+            </Link>
+          </div>
+        </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {filteredApps.map((app) => (

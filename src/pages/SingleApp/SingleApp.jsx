@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import { Download, Star, MessageSquare } from "lucide-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,18 +10,15 @@ const parseCountToNumber = (countStr) => {
     const value = parseFloat(countStr);
     const lastChar = countStr.slice(-1).toUpperCase();
 
-    if (lastChar === 'M') {
-        return value * 1000000;
-    } else if (lastChar === 'B') {
-        return value * 1000000000;
-    } else if (lastChar === 'K') {
-        return value * 1000;
-    }
+    if (lastChar === 'M') return value * 1000000;
+    if (lastChar === 'B') return value * 1000000000;
+    if (lastChar === 'K') return value * 1000;
     return value;
 };
 
 const SingleApp = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const [app, setApp] = useState(null);
     const [installed, setInstalled] = useState(false);
     const { isInstalled, handleInstall: installApp } = useInstallation();
@@ -31,17 +28,19 @@ const SingleApp = () => {
             .then((res) => res.json())
             .then((data) => {
                 const foundApp = data.find((item) => item.id === parseInt(id));
-                setApp(foundApp);
-                if (foundApp && isInstalled(foundApp.id)) {
-                    setInstalled(true);
+                if (!foundApp) {
+                    navigate("/app-not-found", { replace: true });
+                    return;
                 }
+                setApp(foundApp);
+                if (isInstalled(foundApp.id)) setInstalled(true);
             })
-            .catch((err) => console.log(err));
-    }, [id, isInstalled]);
+            .catch(() => navigate("/app-not-found", { replace: true }));
+    }, [id, isInstalled, navigate]);
 
     const handleInstall = () => {
         if (!app) return;
-        installApp(app);
+        if (!installed) installApp(app);
         setInstalled(true);
         toast.success(`${app.name} installed successfully`, {
             position: "top-center",
@@ -51,7 +50,11 @@ const SingleApp = () => {
     };
 
     if (!app) {
-        return <p className="text-center mt-10 text-gray-500 text-lg">Loading...</p>;
+        return (
+            <p className="text-center mt-10 text-gray-500 text-lg animate-pulse">
+                Loading...
+            </p>
+        );
     }
 
     const ratings = [
@@ -61,7 +64,6 @@ const SingleApp = () => {
         { stars: 2, count: 10 },
         { stars: 1, count: 5 },
     ];
-
     const totalRatings = ratings.reduce((acc, r) => acc + r.count, 0);
     const paragraphs = app.description.split("\n\n");
 
@@ -73,12 +75,10 @@ const SingleApp = () => {
                     alt={app.name}
                     className="w-48 h-48 object-cover rounded-lg"
                 />
-
                 <div className="flex-1">
                     <h2 className="text-2xl font-bold text-gray-800 mb-2">{app.name}</h2>
                     <p className="text-gray-600 mb-4">
-                        Developed by{" "}
-                        <span className="text-blue-600 font-medium">{app.developer}</span>
+                        Developed by <span className="text-blue-600 font-medium">{app.developer}</span>
                     </p>
 
                     <div className="flex flex-wrap gap-8 mb-5">
@@ -102,10 +102,7 @@ const SingleApp = () => {
                     <button
                         onClick={handleInstall}
                         disabled={installed}
-                        className={`${installed
-                                ? "bg-gray-400 cursor-not-allowed"
-                                : "bg-green-500 hover:bg-green-600"
-                            } text-white font-semibold px-6 py-2 rounded-lg transition`}
+                        className={`${installed ? "bg-gray-400 cursor-not-allowed" : "bg-green-500 hover:bg-green-600"} text-white font-semibold px-6 py-2 rounded-lg transition`}
                     >
                         {installed ? "Installed" : `Install Now (${app.size})`}
                     </button>
@@ -113,9 +110,7 @@ const SingleApp = () => {
             </div>
 
             <div className="mt-10">
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">
-                    Ratings Breakdown
-                </h3>
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">Ratings Breakdown</h3>
                 {ratings.map((r) => {
                     const percent = (r.count / totalRatings) * 100;
                     return (
@@ -135,7 +130,7 @@ const SingleApp = () => {
 
             <div className="mt-10">
                 <h3 className="text-xl font-semibold mb-3 text-gray-800">Description</h3>
-                <p className="text-[#627382] leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                     {paragraphs.map((paragraph, index) => (
                         <React.Fragment key={index}>
                             {paragraph}
