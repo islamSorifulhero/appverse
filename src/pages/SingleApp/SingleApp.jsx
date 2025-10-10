@@ -135,7 +135,7 @@ const SingleApp = () => {
 
             <div className="mt-10">
                 <h3 className="text-xl font-semibold mb-3 text-gray-800">Description</h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-[#627382] leading-relaxed">
                     {paragraphs.map((paragraph, index) => (
                         <React.Fragment key={index}>
                             {paragraph}

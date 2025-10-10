@@ -6,7 +6,7 @@ const TrendingApp = ({ singleApp }) => {
     const { id, name, image, rating, downloads, companyName } = singleApp; 
 
     return (
-        <Link to={`/app/${id}`} className="block">
+        <Link to={`/apps/${id}`} className="block">
             <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:scale-[1.02]">
                 
                 <div className="flex justify-center items-center pt-4">
