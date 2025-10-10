@@ -6,7 +6,7 @@ import { useInstallation } from '../javaScript/function';
 const parseSizeToNumber = (sizeStr) => {
     if (typeof sizeStr === 'number') return sizeStr;
     if (typeof sizeStr !== 'string') return 0;
-    return parseFloat(sizeStr.replace('MB', '').trim());
+    return parseFloat(sizeStr.replace('M+', '').trim());
 };
 
 const InstalledApps = () => {
@@ -29,8 +29,8 @@ const InstalledApps = () => {
         const sorted = [...apps];
 
         sorted.sort((a, b) => {
-            const sizeA = parseSizeToNumber(a.size);
-            const sizeB = parseSizeToNumber(b.size);
+            const sizeA = parseSizeToNumber(a.downloads);
+            const sizeB = parseSizeToNumber(b.downloads);
 
             if (sortType === 'size_low_high') {
                 return sizeA - sizeB;
