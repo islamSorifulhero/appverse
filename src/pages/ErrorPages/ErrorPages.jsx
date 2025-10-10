@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const ErrorPages = () => {
     return (
         <div>
-            <img className='flex mx-auto my-10 w-85 h-85' src={errorImg} alt="" />
+            <img className='flex mx-auto w-65 h-65' src={errorImg} alt="" />
             <h1 className='text-center text-4xl font-bold text-gray-700'>Oops, page not found!</h1>
             <p className='text-center text-gray-500 mt-2'>The page you are looking for is not available.</p>
             <div className='flex justify-center'>
