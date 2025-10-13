@@ -77,15 +77,8 @@ const AllApps = () => {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {filteredApps.map((app) => (
-            <Link to={`/apps/${app.id}`}
-              key={app.id}
-              className="border rounded-lg p-4 shadow hover:shadow-lg transition"
-            >
-              <img
-                src={app.image}
-                alt={app.name}
-                className="w-35 h-35 mx-auto object-cover rounded-t-2xl"
-              />
+            <Link to={`/apps/${app.id}`} key={app.id} className="border rounded-lg p-4 shadow hover:shadow-lg transition">
+              <img src={app.image} alt={app.name} className="w-35 h-35 mx-auto object-cover rounded-t-2xl"/>
               <h3 className="font-semibold text-lg text-gray-800 mb-2 mt-3">
                 {app.name}
               </h3>
