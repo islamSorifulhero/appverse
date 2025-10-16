@@ -57,12 +57,7 @@ const AllApps = () => {
         <div>
           <p className="text-center text-gray-500 text-6xl mt-10">No Apps Found</p>
           <div className="flex justify-center">
-            <Link
-              to="/"
-              className='mt-5 mb-5 inline-block px-8 py-3 rounded-xl text-xl bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold transition hover:opacity-90'
-            >
-              Go Back!
-            </Link>
+            <Link to="/"className='mt-5 mb-5 inline-block px-8 py-3 rounded-xl text-xl bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold transition hover:opacity-90'>Go Back!</Link>
           </div>
         </div>
       ) : (
