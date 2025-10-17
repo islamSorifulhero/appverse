@@ -72,14 +72,8 @@ const AllApps = () => {
               <p className="text-sm text-gray-500 mb-3">{app.companyName}</p>
 
               <div className="flex justify-between items-center text-gray-600 text-sm">
-                <div className="flex items-center gap-1">
-                  <Star className="w-4 h-4 text-yellow-500" />
-                  <span>{app.rating}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Download className="w-4 h-4 text-blue-500" />
-                  <span>{app.downloads}</span>
-                </div>
+                <div className="flex items-center gap-1"><Star className="w-4 h-4 text-yellow-500"/><span>{app.rating}</span></div>
+                <div className="flex items-center gap-1"><Download className="w-4 h-4 text-blue-500"/><span>{app.downloads}</span></div>
               </div>
             </Link>
           ))}
