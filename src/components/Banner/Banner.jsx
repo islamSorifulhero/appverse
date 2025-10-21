@@ -17,8 +17,6 @@ const Banner = () => {
                             <a href="https://www.apple.com/app-store/"><button className="btn ml-3"><img src={appStore} alt="App Store" />App Store</button></a>
                         </div>
                         <img className='mx-auto w-160' src={hero} alt="" />
-
-
                     </div>
                 </div>
             </div>
