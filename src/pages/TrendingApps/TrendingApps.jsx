@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import TrendingApp from '../TrendingApp/TrendingApp';
 import { Link } from 'react-router';
+import "animate.css"
 
 const TrendingApps = () => {
     const [apps, setApps] = useState([]);
@@ -41,7 +42,7 @@ const TrendingApps = () => {
             <div className='flex justify-center'>
                 <Link
                     to="/Apps"
-                    className='mt-10 inline-block px-8 py-3 rounded-xl text-xl bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold transition hover:opacity-90'> Show All
+                    className='mt-10 inline-block px-8 py-3 rounded-xl text-xl bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold transition hover:opacity-90 animate__animated animate__pulse animate__infinite'> Show All
                 </Link>
             </div>
         </section>
