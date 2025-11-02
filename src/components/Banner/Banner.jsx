@@ -12,9 +12,9 @@ const Banner = () => {
                         <h1 className="text-5xl font-bold">We Build <br /> <span className='text-[#9F62F2] font-bold'>Productive</span> Apps</h1>
                         <p className="py-6 text-[#627382]">At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. Our goal is to turn your ideas into digital experiences that truly make an impact.
                         </p>
-                        <div className='mb-6'>
-                            <a href="https://play.google.com/store/games?hl=en"><button className="font-bold mr-3 btn"><img src={playStore} alt="Google Play" />Google Play</button></a>
-                            <a href="https://www.apple.com/app-store/"><button className="btn ml-3"><img src={appStore} alt="App Store" />App Store</button></a>
+                        <div className='mb-6 animate__animated animate__pulse animate__infinite'>
+                            <a href="https://play.google.com/store/games?hl=en"><button className="font-bold mr-3 btn border-red-600"><img src={playStore} alt="Google Play" />Google Play</button></a>
+                            <a href="https://www.apple.com/app-store/"><button className="btn ml-3 border-black"><img src={appStore} alt="App Store" />App Store</button></a>
                         </div>
                         <img className='mx-auto w-160' src={hero} alt="" />
                     </div>
