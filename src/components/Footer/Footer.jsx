@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from "../../assets/logo.png"
 
+
 const Footer = () => {
     return (
         <div className=''>
@@ -28,7 +29,7 @@ const Footer = () => {
             </footer>
             <footer className="footer border-base-300 border-t px-10 py-4 bg-black text-white">
                 <aside className="grid-flow-col items-center">
-                    <img className='w-12' src={logo} alt="" />
+                    <img className='w-12 animate__animated animate__swing animate__infinite' src={logo} alt="" />
                     <p>
                         HERO.IO
                     </p>
