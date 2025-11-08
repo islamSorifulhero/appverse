@@ -22,7 +22,7 @@ const TrendingApps = () => {
 
     return (
         <section className="my-12 px-4 md:px-8">
-            <h2 className="text-3xl font-semibold text-center mb-1 text-gray-800">
+            <h2 className="text-3xl font-semibold text-center mb-1 text-gray-800 animate__animated animate__infinite animate__pulse">
                 Trending Apps
             </h2>
             <p className='text-center mb-12 text-gray-700'>Explore All Trending Apps on the Market developer by us</p>
