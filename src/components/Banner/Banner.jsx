@@ -2,6 +2,7 @@ import React from 'react';
 import playStore from "../../assets/playstore.png";
 import appStore from "../../assets/appstore.png";
 import hero from '../../assets/hero.png'
+import Marquee from 'react-fast-marquee';
 
 const Banner = () => {
     return (
@@ -10,8 +11,10 @@ const Banner = () => {
                 <div className="hero-content text-center">
                     <div className="w-11/12 mx-auto">
                         <h1 className="text-5xl font-bold">We Build <br /> <span className='text-[#9F62F2] font-bold'>Productive</span> Apps</h1>
-                        <p className="py-6 text-[#627382]">At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. Our goal is to turn your ideas into digital experiences that truly make an impact.
-                        </p>
+                        <Marquee>
+                            <p className="py-6 text-[#627382]">At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. Our goal is to turn your ideas into digital experiences that truly make an impact.
+                            </p>
+                        </Marquee>
                         <div className='mb-6 '>
                             <a href="https://play.google.com/store/games?hl=en"><button className="font-bold mr-3 btn border-red-600 animate__animated animate__backInLeft"><img src={playStore} alt="Google Play" />Google Play</button></a>
                             <a href="https://www.apple.com/app-store/"><button className="btn ml-3 border-black animate__animated animate__backInRight"><img src={appStore} alt="App Store" />App Store</button></a>
