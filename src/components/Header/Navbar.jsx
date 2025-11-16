@@ -4,9 +4,7 @@ import github from "../../assets/github.png";
 import { NavLink } from 'react-router';
 
 const Navbar = () => {
-
     const activeClass = "text-purple-600 font-bold underline";
-
     return (
         <div className="navbar w-11/12 mx-auto">
             <div className="navbar-start">
