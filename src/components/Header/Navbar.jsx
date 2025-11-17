@@ -31,7 +31,7 @@ const Navbar = () => {
 
                 <NavLink className="flex justify-center items-center gap-2 cursor-pointer" to="/">
                     <div>
-                        <img className='w-8 h-8 animate__animated animate__pulse animate__infinite' src={logo} alt="" />
+                        <img className='w-8 h-8 animate__animated animate__rotateOut animate__infinite' src={logo} alt="" />
                     </div>
                     <h1 className='animate__animated animate__pulse animate__infinite'>
                         <span className='font-bold bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent'>HERO.IO</span>
