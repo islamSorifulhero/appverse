@@ -3,7 +3,6 @@ import { Star, Download } from "lucide-react";
 import { Link } from "react-router";
 import logo from "../../assets/car.png"
 
-
 const cards = [
         { title: "Booking Pick & Drop", description: "From personal packages to business shipments — we deliver on time, every time." },
         { title: "Cash On Delivery", description: "Quick and reliable delivery service for all your needs." },
@@ -91,8 +90,6 @@ const AllApps = () => {
       )}
       <div>
         
-
-   
         <div className="container mx-auto px-4 py-8">
             <h1 className='font-extrabold text-3xl mb-5'>How it Works</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
