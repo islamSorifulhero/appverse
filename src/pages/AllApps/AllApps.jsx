@@ -91,8 +91,8 @@ const AllApps = () => {
       <div>
         
         {/* How to works */}
-        <div className="container mx-auto px-4 py-8">
-            <h1 className='font-extrabold text-3xl mb-5'>How it Works</h1>
+        <div className="container mx-auto px-4 py-8 mt-7">
+            <h1 className='font-extrabold text-3xl mb-5 text-center'>How it Works</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {cards.map((card, index) => (
                     <div key={index} className="card bg-base-100 shadow-sm">
