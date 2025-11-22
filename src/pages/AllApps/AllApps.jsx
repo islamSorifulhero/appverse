@@ -10,7 +10,6 @@ const cards = [
         { title: "Booking SME & Corporate", description: "We are always here to help with your delivery needs." },
     ];
 
-
 const AllApps = () => {
   const [apps, setApps] = useState([]);
   const [filteredApps, setFilteredApps] = useState([]);
@@ -77,9 +76,7 @@ const AllApps = () => {
               <h3 className="font-semibold text-lg text-gray-800 mb-2 mt-3">
                 {app.name}
               </h3>
-
               <p className="text-sm text-gray-500 mb-3">{app.companyName}</p>
-
               <div className="flex justify-between items-center text-gray-600 text-sm">
                 <div className="flex items-center gap-1"><Star className="w-4 h-4 text-yellow-500"/><span>{app.rating}</span></div>
                 <div className="flex items-center gap-1"><Download className="w-4 h-4 text-blue-500"/><span>{app.downloads}</span></div>
