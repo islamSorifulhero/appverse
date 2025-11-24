@@ -87,19 +87,17 @@ const AllApps = () => {
       )}
       <div>
 
-        {/* 📱 How to Install Apps (English First)
-        ✅ On Android Phones
-        Method 1: Install from Play Store (Safest & Easiest)
-
-        Open the Play Store.
-
-        Type the name of the app in the search bar.
-
-        Tap the app when it appears.
-
-        Press Install.
-
-        After installation, tap Open to use the app. */}
+        <div className="max-w-3xl mx-auto mt-10">
+          <h2 className="text-2xl font-semibold mb-4">📱 How to Install Apps</h2>
+          <div className="space-y-3 text-lg leading-relaxed">
+            <p className="font-medium">1. Install from Play Store</p>
+            <p className="font-medium">2. Open the Play Store.</p>
+            <p className="font-medium">3. Type the name of the app in the search bar.</p>
+            <p className="font-medium">4. Tap the app when it appears.</p>
+            <p className="font-medium">5. Press Install.</p>
+            <p className="font-medium">5. After installation, tap Open to use the app.</p>
+          </div>
+        </div>
 
         {/* How to works */}
         <div className="container mx-auto px-4 py-8 mt-7">
