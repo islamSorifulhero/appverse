@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Star, Download } from "lucide-react";
 import { Link } from "react-router";
 import logo from "../../assets/car.png"
+import AppsInformation from "../../components/Apps Information/AppsInformation";
 
 const cards = [
   { title: "Booking Pick & Drop", description: "From personal packages to business shipments — we deliver on time, every time." },
@@ -86,6 +87,7 @@ const AllApps = () => {
         </div>
       )}
       <div>
+        <AppsInformation></AppsInformation>
 
         <div className="max-w-3xl mx-auto mt-10">
           <h2 className="text-2xl font-semibold mb-4">📱 How to Install Apps</h2>
