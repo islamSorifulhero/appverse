@@ -2,7 +2,7 @@ import React from 'react';
 
 const AppsInformation = () => {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white px-6 py-10">
+        <div className="min-h-screen bg-cyan-900 text-white px-6 py-10 my-10 rounded-2xl">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold text-center mb-8 animate__animated animate__pulse animate__infinite">
           📱 Good and Bad Sides of Apps
