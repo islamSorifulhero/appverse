@@ -101,23 +101,6 @@ const AllApps = () => {
           </div>
         </div>
 
-        {/* How to works */}
-        <div className="container mx-auto px-4 py-8 mt-7">
-          <h1 className='font-extrabold text-3xl mb-5 text-center'>How it Works</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {cards.map((card, index) => (
-              <div key={index} className="card bg-base-100 shadow-sm">
-                <figure className="flex items-start justify-start">
-                  <img className="ml-5 mt-3" src={logo} alt={card.title} />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">{card.title}</h2>
-                  <p>{card.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );
