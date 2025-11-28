@@ -46,7 +46,7 @@ const AllApps = () => {
   return (
     <div className="my-12 px-4 md:px-8">
       <h2 className="text-3xl font-semibold text-center text-gray-800">Our All Applications</h2>
-      <p className="text-center mb-8 text-[#627382]">Explore All Apps on the Market developed by us. We code for Millions</p>
+      <p className="text-center mb-8 text-cyan-950">Explore All Apps on the Market developed by us. We code for Millions</p>
       <div className="flex justify-between items-center mb-4">
         <div>
           <h2>({filteredApps.length}) Apps Found</h2>
