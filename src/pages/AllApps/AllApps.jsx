@@ -89,7 +89,7 @@ const AllApps = () => {
       <div>
         <AppsInformation></AppsInformation>
 
-        <div className="max-w-3xl mx-auto mt-10">
+        <div className="max-w-3xl mx-auto mt-10 text-shadow-cyan-950">
           <h2 className="text-2xl font-semibold mb-4">📱 How to Install Apps</h2>
           <div className="space-y-3 text-lg leading-relaxed">
             <p className="font-medium">1. Install from Play Store</p>
