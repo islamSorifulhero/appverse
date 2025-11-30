@@ -32,7 +32,7 @@ const AppsInformation = () => {
           </div>
         </div>
 
-        <p className="text-center text-gray-400 mt-10">
+        <p className="text-center mt-10">
           🌱 Use apps wisely — make technology your friend, not your distraction.
         </p>
       </div>
