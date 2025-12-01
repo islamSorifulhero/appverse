@@ -55,7 +55,7 @@ const Navbar = () => {
 
             <div className="navbar-end">
                 <a href='https://github.com/islamSorifulhero' className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold text-[14px] animate__animated animate__infinite animate__pulse">
-                    <img src={github} alt="" />Contribute
+                    <img src={github} alt="" />Github
                 </a>
             </div>
         </div>
