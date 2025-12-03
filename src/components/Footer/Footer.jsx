@@ -31,7 +31,7 @@ const Footer = () => {
                 <aside className="grid-flow-col items-center">
                     <img className='w-12 animate__animated animate__swing animate__infinite' src={logo} alt="" />
                     <p className='animate__animated animate__infinite animate__pulse'>
-                        HERO.IO
+                        App Verse
                     </p>
                 </aside>
                 <nav className="md:place-self-center md:justify-self-end">
